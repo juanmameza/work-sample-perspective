@@ -10,7 +10,7 @@ const TextBlockComponent: React.FC<Props> = ({ block }) => {
 
   return (
     <>
-      <p className={`flex justify-${blockAlign}`} style={{ color: blockColor }}>
+      <p className={`flex p-2 place-content-${blockAlign}`} style={{ color: blockColor }}>
         {block.text}
       </p>
     </>

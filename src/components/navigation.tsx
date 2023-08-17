@@ -12,7 +12,7 @@ const NavigationComponent: React.FC<Props> = ({
   onForwardClick,
 }) => {
   return (
-    <div className="flex self-center space-x-4 place-content-center">
+    <div className="flex self-center space-x-4 place-content-center items-center py-4">
       <button
         onClick={onBackClick}
         disabled={currentPageIndex === 0}
@@ -36,6 +36,7 @@ const NavigationComponent: React.FC<Props> = ({
 
         <span className="sr-only">Icon description</span>
       </button>
+      <p className="text-base text-gray-900 dark:text-white"> {`Page ${currentPageIndex + 1} of ${lastPageIndex + 1}`}</p>
       <button
         onClick={onForwardClick}
         disabled={currentPageIndex === lastPageIndex}

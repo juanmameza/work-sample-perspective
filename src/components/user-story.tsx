@@ -43,7 +43,7 @@ const UserStoryComponent: React.FC = () => {
     funnelObject && (
       <div className="rounded shadow-lg">
         <div
-          className={`flex flex-row gap-4 space-y-2 py-4 max-w-sm h-[700px] overflow-x-hidden`}
+          className="flex flex-row gap-4 space-y-2 py-4 max-w-[375px] h-[600px] overflow-x-hidden"
           style={{ backgroundColor: funnelObject.bgColor }}
         >
           {funnelObject.pages &&

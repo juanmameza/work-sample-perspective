@@ -16,7 +16,7 @@ const ListBlockComponent: React.FC<Props> = ({ block }) => {
           className="flex flex-row justify-center"
         >
           <Image src={item.src} alt="" width={100} height={100} />
-          <div className="flex-col invert self-center">
+          <div className="flex-col text-black self-center">
             <h2>{item.title}</h2>
             <p>{item.description}</p>
           </div>

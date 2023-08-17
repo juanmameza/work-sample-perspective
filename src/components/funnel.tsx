@@ -39,9 +39,10 @@ const FunnelComponent: React.FC<Props> = ({ children }) => {
       <div className="flex flex-row space-x-12">
         <div className="flex flex-col space-y-8 justify-center">
           <UploadComponent onChange={(ev) => handleUpload(ev)} />
+          <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
           <h1 className="text-white self-start my-4">{funnelObject.name}</h1>
         </div>
-        <div className="flex flex-col space-y-8">{children}</div>
+        <div className="flex flex-col space-y-8 place-content-center justify-center">{children}</div>
       </div>
     </FunnelContext.Provider>
   );

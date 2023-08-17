@@ -10,8 +10,11 @@ const ListBlockComponent: React.FC<Props> = ({ block }) => {
 
   return (
     <ul>
-      {items.map((item) => (
-        <li className="flex flex-row justify-center">
+      {items.map((item, idx) => (
+        <li
+          key={`list-${block.id}-${idx}`}
+          className="flex flex-row justify-center"
+        >
           <Image src={item.src} alt="" width={100} height={100} />
           <div className="flex-col invert self-center">
             <h2>{item.title}</h2>

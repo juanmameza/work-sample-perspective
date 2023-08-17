@@ -1,6 +1,6 @@
 type Block = {
   id: string;
-  type: string; // type enum here
+  type: string;
 };
 
 type ListItem = {

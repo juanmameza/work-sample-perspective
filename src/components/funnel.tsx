@@ -7,14 +7,8 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const DEFAULT_FUNNEL_OBJECT = {
-  name: "",
-  bgColor: "white",
-  pages: [],
-};
-
 export const FunnelContext = createContext<{ funnelObject: Funnel }>({
-  funnelObject: DEFAULT_FUNNEL_OBJECT,
+  funnelObject: {} as Funnel
 });
 
 const FunnelComponent: React.FC<Props> = ({ children }) => {

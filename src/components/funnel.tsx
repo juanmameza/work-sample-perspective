@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const FunnelContext = createContext<{ funnelObject: Funnel }>({
-  funnelObject: {} as Funnel
+  funnelObject: {} as Funnel,
 });
 
 const FunnelComponent: React.FC<Props> = ({ children }) => {
@@ -34,9 +34,15 @@ const FunnelComponent: React.FC<Props> = ({ children }) => {
         <div className="flex flex-col space-y-8 justify-center">
           <UploadComponent onChange={(ev) => handleUpload(ev)} />
           <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-          <h1 className="text-white self-start my-4">{funnelObject.name}</h1>
+          {funnelObject.name && (
+            <h1 className="text-white self-start my-4">
+              {funnelObject.name + " loaded successfully"}
+            </h1>
+          )}
         </div>
-        <div className="flex flex-col space-y-8 place-content-center justify-center">{children}</div>
+        <div className="flex flex-col space-y-8 place-content-center justify-center">
+          {children}
+        </div>
       </div>
     </FunnelContext.Provider>
   );

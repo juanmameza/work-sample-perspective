@@ -6,13 +6,13 @@ type Props = {
 };
 
 const ListBlockComponent: React.FC<Props> = ({ block }) => {
-  const { id, items, type } = block;
+  const { id, items } = block;
 
   return (
     <ul>
       {items.map((item, idx) => (
         <li
-          key={`list-${block.id}-${idx}`}
+          key={`list-${id}-${idx}`}
           className="flex flex-row justify-center"
         >
           <Image src={item.src} alt="" width={100} height={100} />

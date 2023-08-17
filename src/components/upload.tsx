@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-
 type Props = {
   onChange: (value: any) => void;
 };
